@@ -1,21 +1,36 @@
+@import "../css/global.scss";
+
 /**
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
 
-.heroBanner {
+.hero,
+:root[data-theme='dark'] .hero {
   padding: 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 
-  > .container {
-    padding: 2rem;
+  display: block;
+  background-color: $light-primary-color;
+  color: white;
+
+  .container {
+    padding-bottom: 4rem;
   }
+
+  .buttonMain {
+    --ifm-button-background-color: #{$light-secondary-color};
+    --ifm-button-border-color: white;
+    color: white;
+  }
+  
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.landscape {
+  background-image: linear-gradient(to top, $light-primary-color 0%, rgba(black, 0) 30%), url("/img/landscape.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  height: 28rem;
 }

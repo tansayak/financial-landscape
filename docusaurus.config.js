@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
 
   title: 'Financial Landscape',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'ก้าวที่ยิ่งใหญ่ ด้วยใจมุ่งมั่น',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',

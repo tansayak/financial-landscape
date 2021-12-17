@@ -7,18 +7,19 @@ import styles from './index.module.scss';
 import HomepageFeatures from '../components/HomepageFeatures';
 
 function HomepageHeader() {
+  console.log(styles)
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <img src="/img/landscape.jpg" alt="Financial landscape" />
-      <div className="container">
+    <header className={styles.hero}>
+      <div className={styles.landscape} />
+      <div className={styles.container}>
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            className={clsx("button button--lg", styles.buttonMain)}
+            to="/paper/part-1/factors">
+            Consultation Paper
           </Link>
         </div>
       </div>

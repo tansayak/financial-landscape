@@ -1,3 +1,5 @@
+@import "global.scss";
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -32,12 +34,6 @@
 
 $font-heading: "Athiti";
 $font-body: "Bai Jamjuree";
-
-$light-primary-color: #003865;
-$light-secondary-color: rgb(154, 88, 48);
-$dark-primary-color: #71c5e8;
-$dark-secondary-color: rgb(213, 145, 103);
-$grey-color: #97999b;
 
 :root {
 
@@ -76,7 +72,6 @@ $grey-color: #97999b;
     --ifm-color-secondary-lightest: #{scale-color($dark-secondary-color, $lightness: 30%)};  
   }
 
-
 }
 
 .docusaurus-highlight-code-line {
@@ -85,13 +80,6 @@ $grey-color: #97999b;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
-
-.hero {
-  display: block;
-  background-color: $light-primary-color;
-  color: white;
-}
-
 
 article {
   
