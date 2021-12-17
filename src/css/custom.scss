@@ -1,0 +1,138 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@font-face {
+	font-family: "Bai Jamjuree";
+	font-weight: normal;
+	src: url("./fonts/BaiJamjuree-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Bai Jamjuree";
+	font-weight: bold;
+	src: url("./fonts/BaiJamjuree-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Athiti";
+	font-weight: normal;
+	src: url("./fonts/Athiti-Medium.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Athiti";
+	font-weight: bold;
+	src: url("./fonts/Athiti-SemiBold.woff2") format("woff2");
+}
+
+$font-heading: "Athiti";
+$font-body: "Bai Jamjuree";
+
+$light-primary-color: #003865;
+$light-secondary-color: rgb(154, 88, 48);
+$dark-primary-color: #71c5e8;
+$dark-secondary-color: rgb(213, 145, 103);
+$grey-color: #97999b;
+
+:root {
+
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: #{$font-heading};
+
+  --ifm-color-primary: #{$light-primary-color};
+  --ifm-color-secondary: #{$light-secondary-color};
+  --ifm-color-primary-dark: #{scale-color($light-primary-color, $lightness: -10%)};
+  --ifm-color-primary-darker: #{scale-color($light-primary-color, $lightness: -20%)};
+  --ifm-color-primary-darkest: #{scale-color($light-primary-color, $lightness: -30%)};
+  --ifm-color-primary-light: #{scale-color($light-primary-color, $lightness: 10%)};
+  --ifm-color-primary-lighter: #{scale-color($light-primary-color, $lightness: 20%)};
+  --ifm-color-primary-lightest: #{scale-color($light-primary-color, $lightness: 30%)};
+  --ifm-color-secondary-dark: #{scale-color($light-secondary-color, $lightness: -10%)};
+  --ifm-color-secondary-darker: #{scale-color($light-secondary-color, $lightness: -20%)};
+  --ifm-color-secondary-darkest: #{scale-color($light-secondary-color, $lightness: -30%)};
+  --ifm-color-secondary-light: #{scale-color($light-secondary-color, $lightness: 10%)};
+  --ifm-color-secondary-lighter: #{scale-color($light-secondary-color, $lightness: 20%)};
+  --ifm-color-secondary-lightest: #{scale-color($light-secondary-color, $lightness: 30%)};
+
+  &[data-theme='dark'] {
+    --ifm-color-primary: #{$dark-primary-color};
+    --ifm-color-secondary: #{$dark-secondary-color};
+    --ifm-color-primary-dark: #{scale-color($dark-primary-color, $lightness: -10%)};
+    --ifm-color-primary-darker: #{scale-color($dark-primary-color, $lightness: -20%)};
+    --ifm-color-primary-darkest: #{scale-color($dark-primary-color, $lightness: -30%)};
+    --ifm-color-primary-light: #{scale-color($dark-primary-color, $lightness: 10%)};
+    --ifm-color-primary-lighter: #{scale-color($dark-primary-color, $lightness: 20%)};
+    --ifm-color-primary-lightest: #{scale-color($dark-primary-color, $lightness: 30%)};
+    --ifm-color-secondary-dark: #{scale-color($dark-secondary-color, $lightness: -10%)};
+    --ifm-color-secondary-darker: #{scale-color($dark-secondary-color, $lightness: -20%)};
+    --ifm-color-secondary-darkest: #{scale-color($dark-secondary-color, $lightness: -30%)};
+    --ifm-color-secondary-light: #{scale-color($dark-secondary-color, $lightness: 10%)};
+    --ifm-color-secondary-lighter: #{scale-color($dark-secondary-color, $lightness: 20%)};
+    --ifm-color-secondary-lightest: #{scale-color($dark-secondary-color, $lightness: 30%)};  
+  }
+
+
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.hero {
+  display: block;
+  background-color: $light-primary-color;
+  color: white;
+}
+
+
+article {
+  
+  font-family: $font-body;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+  }
+  h2 {
+    color: var(--ifm-color-primary);
+  }
+  h3 {
+    color: $light-secondary-color;
+    font-weight: normal;
+  }
+
+  thead, .codeBlockTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module {
+    font-family: $font-heading;
+    font-weight: bold;
+  }
+
+  li > div, li > img {
+    margin-top: 1rem;
+  }
+
+}
+
+
+html[data-theme='dark'] {
+
+  .docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  article {
+    h2 {
+      color: var(--ifm-color-primary-lightest);
+    }
+  }
+
+  a {
+    color: var(--ifm-color-primary-lightest);
+  }
+  
+}
