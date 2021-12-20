@@ -9,8 +9,9 @@ const config = {
 
   title: 'Financial Landscape',
   tagline: 'ก้าวที่ยิ่งใหญ่ ด้วยใจมุ่งมั่น',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://botx.github.io',
+  baseUrl: '/financial-landscape/',
+  trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -25,7 +26,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          editUrl: 'https://github.com/botx/',
           path: 'content/paper',
           routeBasePath: 'paper',
         },
