@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "BOT Financial Landscape",
+    "description": "The title in the navbar"
+  },
+  "item.label.Consultation Paper": {
+    "message": "Consultation Paper",
+    "description": "Navbar item with label Consultation Paper"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  }
+}

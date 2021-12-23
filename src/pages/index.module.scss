@@ -29,8 +29,8 @@
 }
 
 .landscape {
-  background-image: linear-gradient(to top, $light-primary-color 0%, rgba(black, 0) 30%), url("/img/landscape.jpg");
+  background-image: linear-gradient(to top, $light-primary-color 00%, rgba($light-primary-color, 0) 10%), url("/img/landscape.jpg");
   background-size: cover;
   background-position: center bottom;
-  height: 28rem;
+  height: 40rem;
 }

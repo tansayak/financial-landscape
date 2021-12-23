@@ -10,7 +10,8 @@ const config = {
   title: 'Financial Landscape',
   tagline: 'ก้าวที่ยิ่งใหญ่ ด้วยใจมุ่งมั่น',
   url: 'https://botx.github.io',
-  baseUrl: '/financial-landscape/',
+  // baseUrl: '/financial-landscape/',
+  baseUrl: '/',
   trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -30,12 +31,6 @@ const config = {
           path: 'content/paper',
           routeBasePath: 'paper',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/edit/main/website/blog/',
-        // },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
         },
@@ -46,24 +41,29 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   ({
+    colorMode: {
+      switchConfig: {
+        darkIcon: '🌙',
+        lightIcon: '☀️',
+      },
+    },
     navbar: {
       title: 'BOT Financial Landscape',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.png',
+        alt: 'Bank of Thailand',
+        src: '/img/logo.png',
       },
       items: [
         {
           type: 'doc',
           docId: 'part-1/factors',
           position: 'right',
-          label: 'White Paper',
+          label: 'Consultation Paper',
         },
         {
-          to: '/blog',
-          label: 'Blog',
-          position: 'right'
-        },
+          type: 'localeDropdown',
+          position: 'right',
+        }
         // {
         //   href: 'https://github.com/facebook/docusaurus',
         //   label: 'GitHub',
@@ -128,7 +128,12 @@ const config = {
   
   stylesheets: [
 
-  ]
+  ],
+
+  i18n: {
+    defaultLocale: 'th',
+    locales: ['th', 'en'],
+  },
 
 };
 

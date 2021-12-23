@@ -1,0 +1,52 @@
+@import "../../css/global";
+
+.timelineContainer {
+  margin: 3rem auto;
+  padding: 0 2rem;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 2rem;
+
+  .dateContainer {
+    &:nth-last-child(2) {
+      .dateFill {
+        display: none;
+      }
+    }
+  }
+}
+
+.dateBlob {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: solid 5px var(--ifm-color-primary);
+  > div {
+    text-align: center;
+  }
+  .date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.1rem;
+  }
+  .month {
+    font-size: 1rem;
+    line-height: 0.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.dateFill {
+  background-color: var(--ifm-color-primary);
+  width: 5px;
+  min-height: 4rem;
+  margin: -3px auto;
+}
+
+.details {
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
