@@ -18,6 +18,8 @@
 }
 
 .dateBlob {
+  position: relative;
+  z-index: 10;
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
@@ -35,13 +37,29 @@
     line-height: 0.5rem;
     text-transform: uppercase;
   }
+
+  .dateContainer.past & {
+    background-color: rgba(green, 1);
+    color: white;
+  }
+
+  .dateContainer.next & {
+    border: solid 5px var(--ifm-color-secondary);
+  }
 }
 
 .dateFill {
-  background-color: var(--ifm-color-primary);
-  width: 5px;
+  position: relative;
+  z-index: 1;
+  width: 0;
+  border: 3px solid var(--ifm-color-primary);
   min-height: 4rem;
   margin: -3px auto;
+
+  .dateContainer.next &,
+  .dateContainer.future & {
+    border: 3px dashed var(--ifm-color-primary);
+  }
 }
 
 .details {

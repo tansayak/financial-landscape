@@ -1,16 +1,17 @@
 import React from "react"
+import clsx from 'clsx';
 import styles from './index.module.scss';
 
 export default function Timeline() {
 
   const events = [
     {
-      date: "2022-01-14",
+      date: "2021-01-14",
       title: "ประชุมร่วม",
       note: "การประชุมร่วมกันระหว่าง x y และ z เพื่ออนุมัติเอกสาร",
     },
     {
-      date: "2022-01-21",
+      date: "2021-01-21",
       title: "ออกเอกสาร",
       note: "เริ่มเผยแพร่เอกสารเพื่อเปิดรับฟังความคิดเห็นจากประชาชน",
     },
@@ -36,16 +37,18 @@ export default function Timeline() {
     )
   }
 
+  const numPast = events.map(e => e.date).filter(d => new Date(d) < new Date()).length
+
   return(
     <div className={styles.timelineContainer}>
-      {events.map(e => {
+      {events.map((e, i) => {
         return(
           <>
-            <div className={styles.dateContainer}>
+            <div className={clsx(styles.dateContainer, i > numPast && styles.future, i === numPast && styles.next, i < numPast && styles.past)}>
               <DateBlob date={e.date} />
               <div className={styles.dateFill} />              
             </div>
-            <div className={styles.details}>
+            <div className={clsx(styles.details)}>
               <div className={styles.title}>{e.title}</div>
               <div className={styles.note}>{e.note}</div>
             </div>
