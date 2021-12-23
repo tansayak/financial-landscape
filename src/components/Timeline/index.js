@@ -1,38 +1,65 @@
 import React from "react"
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import clsx from 'clsx';
 import styles from './index.module.scss';
 
 export default function Timeline() {
 
+  const {i18n} = useDocusaurusContext();
+
   const events = [
     {
       date: "2021-01-14",
-      title: "ประชุมร่วม",
-      note: "การประชุมร่วมกันระหว่าง x y และ z เพื่ออนุมัติเอกสาร",
+      title: {
+        th: "ประชุมร่วม",
+        en: "Joint Meeting",
+      },
+      note: {
+        th: "การประชุมร่วมกันระหว่าง x y และ z เพื่ออนุมัติเอกสาร",
+        en: "Joint meeting between x, y, and z.",
+      },
     },
     {
       date: "2021-01-21",
-      title: "ออกเอกสาร",
-      note: "เริ่มเผยแพร่เอกสารเพื่อเปิดรับฟังความคิดเห็นจากประชาชน",
+      title: {
+        th: "ออกเอกสาร",
+        en: "Publicizing Paper",
+      },
+      note: {
+        th: "เริ่มเผยแพร่เอกสารเพื่อเปิดรับฟังความคิดเห็นจากประชาชน",
+        en: "Publicizing the consultation paper in order to hear from the people.",
+      },
     },
     {
       date: "2022-02-02",
-      title: "หารือกับสมาคมธนาคาร",
-      note: "หารือร่วมกับสมาคมธนาคารไทยและ AIB เพื่อ...",
+      title: {
+        th: "หารือกับสมาคมธนาคาร",
+        en: "Discussion with TBA and AIB",
+      },
+      note: {
+        th: "หารือร่วมกับสมาคมธนาคารไทยและ AIB เพื่อ...",
+        en: "Discuss the paper with TBA and AIB in order to ...",
+      },
     },
     {
       date: "2022-02-28",
-      title: "งานสัมมนา FL",
-      note: "งานสัมมนา เพื่อสรุปความคิดเห็นที่ได้รับ และการผลักดันนโยบายต่อไป",
+      title: {
+        th: "งานสัมมนา FL",
+        en: "FL Seminar",
+      },
+      note: {
+        th: "งานสัมมนา เพื่อสรุปความคิดเห็นที่ได้รับ และการผลักดันนโยบายต่อไป",
+        en: "A public event to summarize all the feedbacks on the paper."
+      },
     },
   ]
 
-  function DateBlob({ date, locale='th-TH' }) {
+  function DateBlob({ date }) {
     const d = new Date(date)
     return(
       <div className={styles.dateBlob}>
         <div className={styles.date}>{d.getDate()}</div>
-        <div className={styles.month}>{d.toLocaleString(locale, {month: "narrow"})}</div>
+        <div className={styles.month}>{d.toLocaleString(i18n.currentLocale === "th" ? "th-TH" : "en-US", {month: "short"})}</div>
       </div>
     )
   }
@@ -49,8 +76,8 @@ export default function Timeline() {
               <div className={styles.dateFill} />              
             </div>
             <div className={clsx(styles.details)}>
-              <div className={styles.title}>{e.title}</div>
-              <div className={styles.note}>{e.note}</div>
+              <div className={styles.title}>{e.title[i18n.currentLocale]}</div>
+              <div className={styles.note}>{e.note[i18n.currentLocale]}</div>
             </div>
           </>
         )
