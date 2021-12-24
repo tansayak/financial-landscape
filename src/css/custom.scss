@@ -1,4 +1,4 @@
-@import "global.scss";
+@import "./global.module";
 
 /**
  * Any CSS included here will be global. The classic template
@@ -81,7 +81,36 @@ $font-body: "Bai Jamjuree";
   padding: 0 var(--ifm-pre-padding);
 }
 
-article {
+html[data-theme='dark'] {
+  .docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  article {
+    h2 {
+      color: var(--ifm-color-primary-lightest);
+    }
+  }
+  a {
+    color: var(--ifm-color-primary-lightest);
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a > button,
+a:hover > button {
+  text-decoration: none;
+  transition: unset;
+}
+
+article,
+.mdx-wrapper {
+
+  a:hover {
+    text-decoration: var(--ifm-link-hover-decoration);
+  }
   
   font-family: $font-body;
   h1, h2, h3, h4, h5, h6 {
@@ -106,21 +135,12 @@ article {
 
 }
 
-
-html[data-theme='dark'] {
-
-  .docusaurus-highlight-code-line {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  article {
-    h2 {
-      color: var(--ifm-color-primary-lightest);
-    }
-  }
-
-  a {
-    color: var(--ifm-color-primary-lightest);
-  }
-  
+.theme-doc-toc-desktop,
+.theme-doc-toc-mobile {
+  font-family: $font-heading;
 }
+
+.pagination-nav__link {
+  border: none;
+}
+

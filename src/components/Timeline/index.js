@@ -70,7 +70,7 @@ export default function Timeline() {
     <div className={styles.timelineContainer}>
       {events.map((e, i) => {
         return(
-          <>
+          <React.Fragment key={`dateitem${i}`}>
             <div className={clsx(styles.dateContainer, i > numPast && styles.future, i === numPast && styles.next, i < numPast && styles.past)}>
               <DateBlob date={e.date} />
               <div className={styles.dateFill} />              
@@ -79,7 +79,7 @@ export default function Timeline() {
               <div className={styles.title}>{e.title[i18n.currentLocale]}</div>
               <div className={styles.note}>{e.note[i18n.currentLocale]}</div>
             </div>
-          </>
+          </React.Fragment>
         )
       })}
     </div>

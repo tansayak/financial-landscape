@@ -1,0 +1,13 @@
+$light-primary-color: #003865;
+$light-secondary-color: #ff9800; //rgb(154, 88, 48);
+$dark-primary-color: #71c5e8;
+$dark-secondary-color: #ffb74d; //rgb(213, 145, 103);
+$grey-color: #97999b;
+
+:export {
+  lightPrimary: $light-primary-color;
+  lightSecondary: $light-secondary-color;
+  darkPrimary: $dark-primary-color;
+  darkSecondary: $dark-secondary-color;
+  grey: $grey-color;
+}
