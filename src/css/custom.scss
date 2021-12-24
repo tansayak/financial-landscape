@@ -145,3 +145,14 @@ article,
   border: none;
 }
 
+@media (max-width: 996px) {
+  .toggle {
+    display: inherit;
+  }
+}
+
+@media (max-width: 500px) {
+  .toggle {
+    display: none;
+  }
+}
