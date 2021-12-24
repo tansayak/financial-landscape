@@ -1,14 +1,10 @@
 import React from 'react';
-import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useThemeContext from '@theme/hooks/useThemeContext';
 import styles from './index.module.scss';
 import Timeline from '../components/Timeline'
 import Button from '@mui/material/Button';
-import globalStyles from '../css/global.module.scss'
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ThemeWrapper from '../components/ThemeWrapper'
 
 export default function Home() {

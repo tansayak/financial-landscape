@@ -1,6 +1,6 @@
 import React from 'react';
 import useThemeContext from '@theme/hooks/useThemeContext';
-import globalStyles from '../../css/global.module.scss'
+import globalStyles from '../css/global.module.scss'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 export default function Survey({ children }) {

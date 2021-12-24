@@ -1,0 +1,26 @@
+@import "../../css/global.module.scss";
+
+:global(.tick) {
+  font-size: 2rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.countdown {
+  display: grid;
+  margin: 0 auto;
+  width: fit-content;
+  grid-template-columns: repeat(2, 7rem);
+  gap: 1rem 0;
+  @media only screen and (min-width: 500px) {
+    grid-template-columns: repeat(4, 7rem);
+  }
+}
+
+.unit {
+  display: inline-block;
+  .unitName {
+    font-family: $font-heading;
+    text-align: center;
+  }
+}
