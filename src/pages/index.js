@@ -9,39 +9,18 @@ import Timeline from '../components/Timeline'
 import Button from '@mui/material/Button';
 import globalStyles from '../css/global.module.scss'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import ThemeWrapper from '../components/ThemeWrapper'
 
 export default function Home() {
 
   const {siteConfig} = useDocusaurusContext();
 
-  function Hero() {
-    const {isDarkTheme} = useThemeContext();
-    const theme = createTheme({
-      palette: isDarkTheme
-      ? {
-          mode: 'dark',
-          primary: {
-            main: globalStyles.darkPrimary,
-          },
-          secondary: {
-            main: globalStyles.darkSecondary,
-          },
-        }
-      : {
-          mode: 'light',
-          primary: {
-            main: globalStyles.lightPrimary,
-          },
-          secondary: {
-            main: globalStyles.lightSecondary,
-          },
-        },
-      typography: {
-        fontFamily: ['Athiti'],
-      },
-    })
-    return(
-      <ThemeProvider theme={theme}>
+  return (
+    <Layout
+      title={`Hello from ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />"
+    >
+      <ThemeWrapper>
         <header className={styles.hero}>
           <div className={styles.landscape} />
           <div className={styles.container}>
@@ -52,16 +31,7 @@ export default function Home() {
             </Link>
           </div>
         </header>
-      </ThemeProvider>
-    )
-  }
-  
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <Hero />
+      </ThemeWrapper>
       <main>
         <Timeline />
       </main>

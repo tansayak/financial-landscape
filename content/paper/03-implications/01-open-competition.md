@@ -1,3 +1,7 @@
+import ThemeWrapper from "../../../src/components/ThemeWrapper"
+import TextField from '@mui/material/TextField'
+import Button from '@mui/material/Button'
+
 # Open Competition
 
 เปิดโอกาสให้...
@@ -7,6 +11,15 @@
 
 :::success ประเด็นคำถาม
 
-* ท่านคิดว่าหวยงวดนี้จะออกเลขอะไร อย่างไร
+<p>
+  <div>ท่านคิดว่าหวยงวดนี้จะออกเลขอะไร อย่างไร</div>
+  <ThemeWrapper>
+    <TextField id="standard-basic" label="คำตอบ" variant="standard" size="small" />
+  </ThemeWrapper>
+</p>
+<ThemeWrapper>
+  <Button variant="text">Submit</Button>
+</ThemeWrapper>
+
 
 :::
