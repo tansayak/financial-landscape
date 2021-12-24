@@ -140,6 +140,10 @@ article,
   font-family: $font-heading;
 }
 
+.pagination-nav__sublabel {
+  color: var(--ifm-color-secondary);
+}
+
 .pagination-nav__link {
   border: none;
 }

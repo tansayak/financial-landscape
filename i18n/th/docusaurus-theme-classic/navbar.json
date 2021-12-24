@@ -6,5 +6,13 @@
   "item.label.Consultation Paper": {
     "message": "Consultation Paper",
     "description": "Navbar item with label Consultation Paper"
+  },
+  "item.label.FL Seminar": {
+    "message": "FL Seminar",
+    "description": "Navbar item with label FL Seminar"
+  },
+  "item.label.BOT": {
+    "message": "BOT",
+    "description": "Navbar item with label BOT"
   }
 }

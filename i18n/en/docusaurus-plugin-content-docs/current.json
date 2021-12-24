@@ -6,5 +6,13 @@
   "sidebar.tutorialSidebar.category.1. แรงผลักดันการเปลี่ยนแปลง": {
     "message": "1. Driving forces",
     "description": "The label for category 1. แรงผลักดันการเปลี่ยนแปลง in sidebar tutorialSidebar"
+  },
+  "sidebar.docs.category.1. แรงผลักดันการเปลี่ยนแปลง": {
+    "message": "1. แรงผลักดันการเปลี่ยนแปลง",
+    "description": "The label for category 1. แรงผลักดันการเปลี่ยนแปลง in sidebar docs"
+  },
+  "sidebar.docs.category.3. นัยยะต่อนโยบาย": {
+    "message": "3. นัยยะต่อนโยบาย",
+    "description": "The label for category 3. นัยยะต่อนโยบาย in sidebar docs"
   }
 }
