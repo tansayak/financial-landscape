@@ -19,8 +19,9 @@
 
 .unit {
   display: inline-block;
-  .unitName {
-    font-family: $font-heading;
-    text-align: center;
+  text-align: center;
+  font-family: $font-heading;
+  .unitNum {
+    font-size: 2rem;
   }
 }

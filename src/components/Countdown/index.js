@@ -1,7 +1,5 @@
 import React from "react";
-import Flip from "../Flip"
 import styles from "./index.module.scss"
-// import "./index.module.scss"
 
 export default function Countdown({ date }) {
 
@@ -32,7 +30,7 @@ export default function Countdown({ date }) {
       {["Day", "Hour", "Minute", "Second"].map((e, i) => {
         return(
           <div className={styles.unit}>
-            <Flip value={value[i].toString().padStart(2, '0')} />
+            <div className={styles.unitNum}>{value[i].toString().padStart(2, '0')}</div>
             <div className={styles.unitName}>{e + (value[i] > 1 ? "s" : "")}</div>
           </div>
         )
