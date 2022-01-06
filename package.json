@@ -15,8 +15,8 @@
     "mydeploy": "gh-pages -d build"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.13",
-    "@docusaurus/preset-classic": "2.0.0-beta.13",
+    "@docusaurus/core": "^2.0.0-beta.14",
+    "@docusaurus/preset-classic": "^2.0.0-beta.14",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@mdx-js/react": "^1.6.21",
@@ -27,7 +27,7 @@
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sass": "^1.45.0"
+    "sass": "^1.45.1"
   },
   "browserslist": {
     "production": [
